@@ -48,7 +48,7 @@ resource "azurerm_network_security_group" "this" {
 }
 
 resource "azurerm_subnet_network_security_group_association" "this" {
-  subnet_id                 = azurerm_subnet.this[0].id
+  subnet_id                 = azurerm_subnet.this[1].id
   network_security_group_id = azurerm_network_security_group.this.id
 }
 
