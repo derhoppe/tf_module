@@ -47,6 +47,11 @@ resource "azurerm_network_security_group" "this" {
   tags = var.tags
 }
 
+resource "azurerm_resource_group" "this" {
+  name     = "test-rg"
+  location = var.location
+}
+
 resource "azurerm_subnet_network_security_group_association" "this" {
   subnet_id                 = azurerm_subnet.this[1].id
   network_security_group_id = azurerm_network_security_group.this.id
