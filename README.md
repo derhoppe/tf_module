@@ -4,7 +4,7 @@ usage of the module
 
 ```
 module "vnet" {
-  source              = "./path_to_module/my_vnet_module"
+  source              = "git::https://github.com/derhoppe/tf_module.git?ref=4.0.0"
   vnet_name           = "my-vnet"
   location            = "East US"
   resource_group_name = "my-resource-group"
